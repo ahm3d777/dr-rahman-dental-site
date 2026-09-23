@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Dental Care with Dr. Rahman — Banani, Dhaka</title>
+<meta name="description" content="Dental Care with Dr. Rahman — a personal dental practice on Road 4, Block C, Banani. Implants, orthodontics and smile design. +880 1894-221464.">
+<meta name="theme-color" content="#16202E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;1,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F1ECE3; --bone-2:#E7E0D3; --paper:#FBF8F2; --ink:#16202E; --ink-2:#223044;
+  --ox:#6E1F2A; --ox-2:#8A2E3A; --brass:#A8844E; --brass-2:#C9AA78;
+  --muted:#6B665E; --rule:rgba(22,32,46,.14); --rule-l:rgba(251,248,242,.16);
+  --display:'Libre Caslon Display',Georgia,serif; --text:'Libre Caslon Text',Georgia,serif;
+  --sans:'Hanken Grotesk',system-ui,sans-serif; --script:'Mrs Saint Delafield',cursive;
+  --wrap:min(1240px,100% - 40px); --ease:cubic-bezier(.2,.75,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:86px;overflow-x:clip}
+body{background:var(--bone);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+img,svg{display:block;max-width:100%}
+.wrap{width:var(--wrap);margin-inline:auto}
+section{padding:clamp(80px,10vw,140px) 0;position:relative}
+.sc{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.num{font-family:var(--text);font-style:italic;color:var(--brass)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;letter-spacing:-.01em}
+h2{font-size:clamp(2.4rem,5vw,4.4rem)}
+h2 i,h1 i{font-family:var(--text);font-style:italic;color:var(--ox)}
+.lead{font-size:1.08rem;color:var(--muted);max-width:54ch}
+.rule{height:1px;background:var(--rule)}
+
+/* photo frame with designed fallback */
+.ph{position:relative;overflow:hidden;background:
+  repeating-linear-gradient(135deg,rgba(168,132,78,.08) 0 1px,transparent 1px 9px),
+  linear-gradient(160deg,var(--bone-2),#D9CFBF)}
+.ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.02);transition:transform 1.4s var(--ease)}
+.ph .fb{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--text);font-style:italic;color:rgba(22,32,46,.35);font-size:.95rem}
+.ph img + .fb{display:none}
+
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 26px;font-weight:600;font-size:.9rem;letter-spacing:.02em;border-radius:2px;transition:all .35s var(--ease);white-space:nowrap}
+.btn svg{width:16px;height:16px;transition:transform .35s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:var(--ox)}
+.btn-ox{background:var(--ox);color:var(--paper)}
+.btn-ox:hover{background:var(--ink)}
+.btn-line{border:1px solid var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+.btn-line.l{border-color:var(--rule-l);color:var(--paper)}
+.btn-line.l:hover{background:var(--paper);color:var(--ink)}
+.link{font-weight:600;border-bottom:1px solid currentColor;padding-bottom:2px}
+
+/* top line */
+.topline{border-bottom:1px solid var(--rule);font-size:.78rem;color:var(--muted)}
+.topline .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:10px 0;flex-wrap:wrap}
+.topline .sec{display:inline-flex;align-items:center;gap:7px;color:var(--ink);font-weight:600}
+.topline .sec svg{width:13px;height:13px;color:var(--brass)}
+.topline b{color:var(--ink);font-weight:600}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(241,236,227,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.s{border-color:var(--rule)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0}
+.brand{display:flex;align-items:center;gap:14px}
+.seal{width:50px;height:50px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;position:relative;font-family:var(--text);font-style:italic;font-size:1.1rem}
+.seal::after{content:"";position:absolute;inset:3px;border-radius:50%;border:1px solid var(--brass)}
+.brand .w{font-family:var(--display);font-size:1.35rem;line-height:1}
+.brand .w small{display:block;font-family:var(--text);font-style:italic;font-size:.92rem;color:var(--ox);margin-top:3px}
+.nav ul{display:flex;gap:30px;list-style:none;font-size:.9rem;font-weight:500}
+.nav ul a{position:relative;color:var(--muted);transition:color .3s}
+.nav ul a:hover{color:var(--ink)}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--ox);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.nav ul a:hover::after{transform:none}
+.nav .acts{display:flex;gap:10px;align-items:center}
+.mb{display:none;width:46px;height:46px;border:1px solid var(--ink);border-radius:50%;place-items:center}
+.drawer{position:fixed;inset:0;z-index:80;background:var(--ink);color:var(--paper);padding:24px 22px calc(24px + env(safe-area-inset-bottom));display:flex;flex-direction:column;clip-path:circle(0 at calc(100% - 45px) 45px);transition:clip-path .7s var(--ease)}
+.drawer.o{clip-path:circle(150% at calc(100% - 45px) 45px)}
+.drawer .x{align-self:flex-end;width:46px;height:46px;border-radius:50%;border:1px solid var(--rule-l);font-size:1.5rem}
+.drawer a.l{font-family:var(--display);font-size:2.4rem;padding:12px 0;border-bottom:1px solid var(--rule-l);display:flex;gap:16px;align-items:baseline}
+.drawer a.l span{font-family:var(--text);font-style:italic;font-size:1rem;color:var(--brass-2)}
+.drawer .b{margin-top:auto;display:grid;gap:10px}
+.drawer .btn{justify-content:center;white-space:normal}
+
+/* hero */
+.hero{padding:clamp(40px,6vw,80px) 0 clamp(70px,9vw,120px)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(40px,6vw,90px);align-items:end}
+.hero h1{font-size:clamp(3.1rem,7.6vw,7rem);margin:26px 0 30px}
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln>span{display:inline-block;animation:rise 1.2s var(--ease) both}
+.hero h1 .ln:nth-child(2)>span{animation-delay:.12s}
+.hero h1 .ln:nth-child(3)>span{animation-delay:.24s}
+@keyframes rise{from{transform:translateY(105%)}}
+.sig{font-family:var(--script);font-size:clamp(3rem,5vw,4.2rem);color:var(--ink);line-height:1;margin:6px 0 0 -4px;position:relative;display:inline-block}
+.sig svg{position:absolute;left:0;bottom:-6px;width:100%;height:18px;overflow:visible}
+.sig path{stroke:var(--ox);stroke-width:1.4;fill:none;stroke-dasharray:400;stroke-dashoffset:400;animation:draw 1.6s .9s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.sig-cap{font-size:.78rem;color:var(--muted);margin-top:14px;letter-spacing:.04em}
+.hero .ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.portrait{position:relative;padding:0 0 26px 26px}
+.portrait::before{content:"";position:absolute;left:0;bottom:0;right:26px;top:26px;border:1px solid var(--brass);z-index:0}
+.portrait .ph{aspect-ratio:4/5;position:relative;z-index:1}
+.portrait .cap{position:absolute;z-index:2;right:-10px;top:32px;background:var(--paper);padding:10px 14px;font-family:var(--text);font-style:italic;font-size:.85rem;box-shadow:0 12px 30px -16px rgba(22,32,46,.4);transform:rotate(2deg)}
+.slip{position:absolute;z-index:3;left:-34px;bottom:-4px;width:250px;background:var(--paper);padding:18px 18px 16px;box-shadow:0 24px 50px -24px rgba(22,32,46,.5);transform:rotate(-3deg);transition:transform .5s var(--ease)}
+.slip:hover{transform:rotate(0) translateY(-4px)}
+.slip::before{content:"";position:absolute;left:0;right:0;top:-6px;height:12px;background:radial-gradient(circle at 6px 6px,var(--bone) 5px,transparent 5.5px) 0 0/12px 12px repeat-x}
+.slip .t{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--ox)}
+.slip .r{display:flex;justify-content:space-between;border-bottom:1px dotted var(--rule);padding:8px 0;font-size:.84rem}
+.slip .r span:first-child{color:var(--muted)}
+.slip .r span:last-child{font-family:var(--text);font-style:italic}
+.slip button{margin-top:12px;width:100%;padding:11px;background:var(--ink);color:var(--paper);font-weight:600;font-size:.82rem;letter-spacing:.04em}
+.slip button:hover{background:var(--ox)}
+
+/* letterhead band */
+.band{border-block:1px solid var(--rule);background:var(--paper)}
+.band .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:22px 0;flex-wrap:wrap}
+.band span{font-family:var(--text);font-style:italic;font-size:clamp(1.05rem,1.8vw,1.35rem);display:flex;align-items:center;gap:14px}
+.band span+span::before{content:"◆";font-style:normal;font-size:.55rem;color:var(--brass)}
+
+/* letter */
+.letter .wrap{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(40px,6vw,90px)}
+.letter .side{position:sticky;top:120px;align-self:start}
+.paper{background:var(--paper);padding:clamp(34px,5vw,70px);position:relative;box-shadow:0 1px 0 var(--rule),0 30px 60px -40px rgba(22,32,46,.35)}
+.paper::before{content:"";position:absolute;left:clamp(18px,3vw,38px);top:0;bottom:0;width:1px;background:rgba(110,31,42,.18)}
+.paper .meta{display:flex;justify-content:space-between;gap:12px;font-size:.78rem;color:var(--muted);padding-bottom:22px;border-bottom:1px solid var(--rule);margin-bottom:28px;flex-wrap:wrap}
+.paper p{font-family:var(--text);font-size:clamp(1.1rem,1.6vw,1.32rem);line-height:1.75;margin-bottom:20px;color:#26303d}
+.paper p:first-of-type::first-letter{font-family:var(--display);float:left;font-size:4.6em;line-height:.8;padding:6px 10px 0 0;color:var(--ox)}
+.paper .sig{font-size:clamp(3rem,5vw,4rem);margin-top:10px}
+.paper .draft{position:absolute;right:22px;top:22px;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ox);border:1px solid var(--ox);padding:4px 8px;transform:rotate(4deg);opacity:.7}
+
+/* treatments index */
+.idx-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:50px}
+.idx{border-top:1px solid var(--ink)}
+.row{border-bottom:1px solid var(--rule)}
+.row>button{width:100%;display:grid;grid-template-columns:70px 1fr auto 44px;gap:20px;align-items:center;padding:28px 0;text-align:left;transition:padding .45s var(--ease)}
+.row>button:hover{padding-left:14px}
+.row .n{font-family:var(--text);font-style:italic;color:var(--brass);font-size:1.1rem}
+.row h3{font-size:clamp(1.8rem,3.6vw,3rem);transition:color .3s}
+.row>button:hover h3{color:var(--ox)}
+.row .k{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.row .pm{width:44px;height:44px;border-radius:50%;border:1px solid var(--rule);display:grid;place-items:center;transition:all .4s var(--ease);font-size:1.2rem}
+.row.o .pm{background:var(--ink);color:var(--paper);transform:rotate(45deg)}
+.row .body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s var(--ease)}
+.row.o .body{grid-template-rows:1fr}
+.row .body>div{overflow:hidden}
+.row .inner{display:grid;grid-template-columns:70px 1.2fr 1fr .9fr;gap:20px;padding:0 0 34px}
+.row .inner p{color:var(--muted)}
+.row .inner dl{display:grid;gap:10px;font-size:.9rem}
+.row .inner dt{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.row .inner dd{font-family:var(--text);font-style:italic;font-size:1.02rem}
+.row .inner .ph{aspect-ratio:4/3}
+.row .inner .act{display:flex;align-items:end}
+.float{position:fixed;left:0;top:0;width:260px;height:320px;pointer-events:none;z-index:40;opacity:0;transform:translate(-50%,-50%) scale(.85) rotate(-4deg);transition:opacity .35s,transform .5s var(--ease)}
+.float.on{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(-3deg)}
+.float .ph{width:100%;height:100%;box-shadow:0 30px 60px -25px rgba(22,32,46,.55)}
+
+/* implant scroll anatomy */
+.anat{background:var(--ink);color:var(--paper);padding:0}
+.anat .track{height:320vh;position:relative}
+.anat .stick{position:sticky;top:0;height:100vh;padding-top:84px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(30px,5vw,80px)}
+.anat .sc{color:var(--brass-2)}
+.anat h2 i{color:var(--brass-2)}
+.anat .draw{display:grid;place-items:center;height:100%;position:relative}
+.anat .draw svg{width:min(100%,460px);height:auto;max-height:80vh}
+.anat .draw .lbl{font-family:var(--sans);font-size:9px;letter-spacing:1.6px;fill:var(--brass-2);text-transform:uppercase}
+.anat .steps{position:relative}
+.anat h2{font-size:clamp(2rem,3.6vw,3.3rem)}
+.anat .stp{padding:14px 0;border-top:1px solid var(--rule-l);opacity:.32;transition:opacity .5s}
+.anat .stp.on{opacity:1}
+.anat .stp .num{color:var(--brass-2);font-size:1rem}
+.anat .stp h3{font-size:clamp(1.4rem,2.2vw,1.9rem);margin:6px 0}
+.anat .stp p{color:rgba(251,248,242,.62);max-width:44ch}
+.anat .prog{height:2px;background:var(--rule-l);margin-top:26px;position:relative}
+.anat .prog i{position:absolute;left:0;top:0;bottom:0;background:var(--brass-2);width:0}
+.part{transition:transform .9s var(--ease),opacity .6s}
+
+/* braces vs aligners as rx cards */
+.rx .head{max-width:760px;margin-bottom:56px}
+.rx-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{background:var(--paper);padding:clamp(28px,4vw,44px);position:relative;transition:transform .5s var(--ease),box-shadow .5s}
+.card:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 30px 60px -35px rgba(22,32,46,.45)}
+.card .top{display:flex;justify-content:space-between;align-items:start;border-bottom:2px solid var(--ink);padding-bottom:16px;margin-bottom:18px}
+.card .rxm{font-family:var(--display);font-size:3rem;line-height:.8;color:var(--ox)}
+.card h3{font-size:2.2rem}
+.card .top small{display:block;font-family:var(--text);font-style:italic;color:var(--muted);font-size:.95rem;margin-top:4px}
+.lead-row{display:flex;align-items:baseline;gap:10px;padding:11px 0;font-size:.95rem}
+.lead-row span:first-child{color:var(--muted)}
+.lead-row i{flex:1;border-bottom:1px dotted rgba(22,32,46,.3);transform:translateY(-4px)}
+.lead-row span:last-child{font-weight:600;text-align:right}
+.card .foot{margin-top:20px;display:flex;justify-content:space-between;align-items:end;gap:14px}
+.card .foot .sig{font-size:2.4rem}
+
+/* practice */
+.practice{background:var(--paper)}
+.practice .grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px;margin-top:50px}
+.practice .grid>*{min-width:0}
+.practice figure .ph{aspect-ratio:3/4}
+.practice figure:first-child .ph{aspect-ratio:auto;height:100%}
+.practice figure:hover img{transform:scale(1.04)}
+.practice figcaption{font-family:var(--text);font-style:italic;color:var(--muted);font-size:.92rem;margin-top:10px}
+.promises{display:grid;grid-template-columns:repeat(3,1fr);margin-top:70px;border-top:1px solid var(--ink)}
+.promises div{padding:30px 30px 0 0}
+.promises div+div{padding-left:30px;border-left:1px solid var(--rule)}
+.promises .num{font-size:1.6rem}
+.promises h3{font-size:1.7rem;margin:10px 0 8px}
+.promises p{color:var(--muted);font-size:.95rem}
+
+/* faq */
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(40px,6vw,90px)}
+details{border-bottom:1px solid var(--rule);padding:24px 0}
+details:first-of-type{border-top:1px solid var(--ink)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;font-family:var(--display);font-size:clamp(1.3rem,2vw,1.65rem);line-height:1.25}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--sans);font-weight:300;font-size:1.6rem;line-height:1;color:var(--ox);transition:transform .4s var(--ease)}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);margin-top:12px;max-width:60ch}
+
+/* visit — calling card */
+.visit{background:var(--bone-2)}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
+.ccard{background:var(--paper);aspect-ratio:1.75/1;padding:clamp(22px,3.4vw,40px);display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 2px 0 var(--bone),0 4px 0 #DCD3C4,0 40px 70px -35px rgba(22,32,46,.5);transform:rotate(-2.5deg);transition:transform .6s var(--ease);position:relative}
+.ccard:hover{transform:rotate(0)}
+.ccard .t{display:flex;justify-content:space-between;align-items:start;gap:12px}
+.ccard .w{font-family:var(--display);font-size:clamp(1.3rem,2.4vw,2rem);line-height:1.05}
+.ccard .w i{display:block;font-family:var(--text);color:var(--ox);font-size:.7em}
+.ccard .b{display:flex;justify-content:space-between;align-items:end;gap:12px;font-size:clamp(.72rem,1.1vw,.88rem);border-top:1px solid var(--rule);padding-top:12px}
+.ccard .b b{font-weight:600}
+.vinfo h2{margin:16px 0 26px}
+.vrow{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--rule)}
+.vrow span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600;padding-top:4px}
+.vrow a:hover{color:var(--ox)}
+.vinfo .b{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.mapbox{grid-column:1/-1;height:380px;position:relative;margin-top:30px;border:1px solid var(--rule);overflow:hidden}
+.mapbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) sepia(.25) contrast(.95)}
+
+/* footer */
+footer{background:var(--ox);color:rgba(251,248,242,.72);padding:clamp(70px,9vw,120px) 0 calc(30px + env(safe-area-inset-bottom))}
+footer .big{font-family:var(--display);color:var(--paper);font-size:clamp(3rem,9vw,8.4rem);line-height:.95;letter-spacing:-.02em}
+footer .big i{font-family:var(--text);color:var(--brass-2)}
+footer .cta{display:flex;gap:10px;flex-wrap:wrap;margin:36px 0 70px}
+footer .cta .btn-ink{background:var(--paper);color:var(--ink)}
+footer .cta .btn-ink:hover{background:var(--brass-2)}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;padding:40px 0;border-top:1px solid var(--rule-l)}
+.fg h4{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-2);margin-bottom:14px}
+.fg ul{list-style:none;display:grid;gap:8px}
+.fg a:hover{color:var(--paper)}
+.fb{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:22px;border-top:1px solid var(--rule-l);font-size:.8rem}
+.fb .sec{display:inline-flex;align-items:center;gap:7px;color:var(--paper)}
+.fb .sec svg{width:13px;height:13px}
+
+/* mobile bar */
+.mbar{display:none;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:60;background:var(--ink);color:var(--paper);grid-template-columns:1fr 1fr 1.4fr;box-shadow:0 20px 40px -12px rgba(22,32,46,.6)}
+.mbar a,.mbar button{padding:15px 6px;text-align:center;font-weight:600;font-size:.84rem;display:flex;align-items:center;justify-content:center;gap:6px}
+.mbar a+a,.mbar a+button{border-left:1px solid var(--rule-l)}
+.mbar .bk{background:var(--ox)}
+.mbar svg{width:16px;height:16px}
+
+/* booking — appointment card */
+.modal{position:fixed;inset:0;z-index:90;background:rgba(22,32,46,.6);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:18px}
+.modal.o{display:flex}
+.appt{width:min(620px,100%);max-height:94vh;overflow:auto;background:var(--paper);display:grid;grid-template-columns:1fr 150px;animation:pin .6s var(--ease);position:relative}
+@keyframes pin{from{opacity:0;transform:translateY(24px) rotate(-2deg)}}
+.appt .main{padding:clamp(24px,4vw,36px)}
+.appt .stub{background:var(--ink);color:var(--paper);padding:26px 18px;display:flex;flex-direction:column;justify-content:space-between;position:relative;border-left:2px dashed var(--brass)}
+.appt .stub::before,.appt .stub::after{content:"";position:absolute;left:-11px;width:20px;height:20px;border-radius:50%;background:rgba(22,32,46,.001);box-shadow:0 0 0 400px transparent}
+.appt .stub .sc{color:var(--brass-2)}
+.appt .stub .seal{border-color:var(--paper);color:var(--paper);margin:18px 0}
+.appt .stub .no{font-family:var(--text);font-style:italic;font-size:.9rem}
+.appt .x{position:absolute;top:12px;right:162px;width:38px;height:38px;border-radius:50%;border:1px solid var(--rule);font-size:1.3rem;background:var(--paper)}
+.appt h3{font-size:2.1rem;margin:10px 0 4px}
+.appt .sub{font-family:var(--text);font-style:italic;color:var(--muted);margin-bottom:18px}
+.fld{display:grid;grid-template-columns:110px 1fr;align-items:end;gap:12px;padding:10px 0;border-bottom:1px dotted rgba(22,32,46,.35)}
+.fld label{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600;padding-bottom:6px}
+.fld input,.fld select{font:inherit;font-family:var(--text);font-style:italic;font-size:1.1rem;border:0;background:transparent;outline:none;color:var(--ink);width:100%;padding:4px 0}
+.fld input::placeholder{color:rgba(22,32,46,.3)}
+.appt .go{margin-top:22px;width:100%;justify-content:center}
+.appt .fine{font-size:.76rem;color:var(--muted);margin-top:10px;text-align:center}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1040px){
+  .nav ul{display:none}
+  .hero .wrap,.letter .wrap,.faq .wrap{grid-template-columns:1fr}
+  .portrait{max-width:520px;margin:30px auto 0;width:100%}
+  .letter .side{position:static}
+  .row .inner{grid-template-columns:1fr 1fr;padding-left:0}
+  .row .inner .sp{display:none}
+  .practice .grid{grid-template-columns:1fr 1fr}
+  .practice figure:first-child{grid-column:1/-1}
+  .practice figure:first-child .ph{aspect-ratio:16/9;height:auto;width:100%}
+  .anat .stick{grid-template-columns:1fr;grid-template-rows:48vh auto;align-content:start;padding-top:80px;gap:10px}
+  .anat .draw svg{max-height:46vh}
+  .anat .stp{padding:14px 0}
+  .anat .stp:not(.on){display:none}
+  .anat .stp p{font-size:.95rem}
+  .visit .wrap{grid-template-columns:1fr}
+  .ccard{max-width:520px;width:100%;margin:10px auto}
+}
+@media (max-width:720px){
+  body{padding-bottom:80px}
+  .topline .hide{display:none}
+  .nav .acts .btn{display:none}
+  .mb{display:grid}
+  .slip{left:-8px;width:220px}
+  .portrait .cap{right:0}
+  .row>button{grid-template-columns:40px 1fr 40px;gap:12px;padding:22px 0}
+  .row .k{display:none}
+  .row .inner{grid-template-columns:1fr}
+  .row .inner .ph{display:none}
+  .rx-grid,.promises{grid-template-columns:1fr}
+  .promises div,.promises div+div{padding:26px 0;border-left:0;border-bottom:1px solid var(--rule)}
+  .practice .grid{grid-template-columns:1fr}
+  .fg{grid-template-columns:1fr}
+  .mbar{display:grid}
+  .appt{grid-template-columns:1fr}
+  .appt .stub{display:none}
+  .appt .x{right:12px}
+  .fld{grid-template-columns:1fr;gap:2px}
+  .band span{font-size:.95rem}
+  .band .wrap{justify-content:center}
+  .vrow{grid-template-columns:1fr;gap:4px}
+  .mapbox{height:300px}
+}
+@media (hover:none){.float{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.sig path{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+  <symbol id="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="ph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h3.5l1.5 5-2.2 1.4a11 11 0 0 0 6.8 6.8L16 14l5 1.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-4.1-3.6c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1.1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.8a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.2-.3-.3-.6-.4zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm0-21.6A11.8 11.8 0 0 0 1.9 17.9L.2 24l6.3-1.6A11.8 11.8 0 1 0 12 .2z"/></symbol>
+</svg>
+
+<div class="topline">
+  <div class="wrap">
+    <span class="sec"><svg><use href="#lock"/></svg>Secure site</span>
+    <span class="hide">Road 4, Block C, Banani, Dhaka · By appointment</span>
+    <a href="tel:+8801894221464">Appointments <b>+880 1894-221464</b></a>
+  </div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand"><span class="seal">DR</span><span class="w">Dental Care<small>with Dr. Rahman</small></span></a>
+    <ul>
+      <li><a href="#note">The Practice</a></li>
+      <li><a href="#treatments">Treatments</a></li>
+      <li><a href="#implants">Implants</a></li>
+      <li><a href="#orthodontics">Orthodontics</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <div class="acts">
+      <button class="btn btn-ink" data-book>Request an appointment <svg><use href="#arr"/></svg></button>
+      <button class="mb" id="mb" aria-label="Open menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 9h16M4 15h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<nav class="drawer" id="drawer">
+  <button class="x" id="dx" aria-label="Close menu">×</button>
+  <a class="l" href="#note"><span>i.</span>The Practice</a>
+  <a class="l" href="#treatments"><span>ii.</span>Treatments</a>
+  <a class="l" href="#implants"><span>iii.</span>Implants</a>
+  <a class="l" href="#orthodontics"><span>iv.</span>Orthodontics</a>
+  <a class="l" href="#visit"><span>v.</span>Visit</a>
+  <div class="b">
+    <button class="btn btn-ox" data-book>Request an appointment</button>
+    <a class="btn btn-line l" href="tel:+8801894221464">Call +880 1894-221464</a>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="sc">A personal dental practice · Banani</span>
+      <h1>
+        <span class="ln"><span>Dentistry,</span></span>
+        <span class="ln"><span>with a name</span></span>
+        <span class="ln"><span><i>on the door.</i></span></span>
+      </h1>
+      <p class="lead">Implants, orthodontics and smile design — every patient seen, planned and treated by Dr. Rahman personally. Not passed along. Not rushed.</p>
+      <div class="sig" aria-label="Signature: Dr. Rahman">Dr. Rahman<svg viewBox="0 0 300 18" preserveAspectRatio="none"><path d="M2 12 C 60 4, 140 16, 210 8 S 290 6, 298 10"/></svg></div>
+      <p class="sig-cap">Lead Dentist &amp; Founder</p>
+      <div class="ctas">
+        <button class="btn btn-ink" data-book>Request an appointment <svg><use href="#arr"/></svg></button>
+        <a class="btn btn-line" href="https://wa.me/8801894221464" target="_blank" rel="noopener">Message on WhatsApp</a>
+      </div>
+    </div>
+    <div class="portrait rv">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=1000&q=80&auto=format&fit=crop" alt="Portrait placeholder for Dr. Rahman" onerror="this.remove()"><span class="fb">Portrait of Dr. Rahman</span></div>
+      <span class="cap">Dr. Rahman, at the Banani practice</span>
+      <div class="slip">
+        <div class="t">Appointment slip</div>
+        <div class="r"><span>Practice</span><span>Road 4, Block C</span></div>
+        <div class="r"><span>Seen by</span><span>Dr. Rahman</span></div>
+        <div class="r"><span>First visit</span><span>Consultation</span></div>
+        <button data-book>Fill in my slip →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <span>Dental implants</span><span>Braces &amp; aligners</span><span>Veneers &amp; smile design</span><span>Family dentistry</span>
+  </div>
+</div>
+
+<!-- LETTER -->
+<section class="letter" id="note">
+  <div class="wrap">
+    <div class="side rv">
+      <span class="sc">i. The Practice</span>
+      <h2 style="margin:18px 0 20px">A note from <i>the dentist.</i></h2>
+      <p class="lead">A small clinic run the old-fashioned way — one dentist responsible for your care from the first examination to the final check-up.</p>
+    </div>
+    <article class="paper rv">
+      <span class="draft">Draft copy</span>
+      <div class="meta"><span>Dental Care with Dr. Rahman</span><span>Road 4, Block C, Banani, Dhaka</span></div>
+      <p>When you sit in my chair, you're not a case number. I want you to understand exactly what's happening in your mouth, what your options are, and what each one will cost — before we begin anything.</p>
+      <p>Most of my work is replacing missing teeth with implants and straightening teeth with braces or aligners. Both take planning, patience and precision, and I'd rather take an extra ten minutes explaining than have you leave unsure.</p>
+      <p>If you've been putting off a visit, I understand. Come in for a conversation first. There is no obligation, only honest advice.</p>
+      <div class="sig">Dr. Rahman</div>
+    </article>
+  </div>
+</section>
+
+<!-- TREATMENTS INDEX -->
+<section id="treatments" style="padding-top:0">
+  <div class="wrap">
+    <div class="idx-head rv">
+      <div><span class="sc">ii. Treatments</span><h2 style="margin-top:18px">What we <i>do well.</i></h2></div>
+      <p class="lead" style="max-width:40ch">Tap a treatment to see who it's for, how many visits it takes and what to expect.</p>
+    </div>
+    <div class="idx" id="idx"></div>
+  </div>
+</section>
+<div class="float" id="float"><div class="ph"><img id="floatImg" alt="" onerror="this.style.display='none'"></div></div>
+
+<!-- IMPLANT ANATOMY (scroll-driven) -->
+<section class="anat" id="implants">
+  <div class="track" id="track">
+    <div class="wrap stick">
+      <div class="draw">
+        <svg viewBox="0 0 345 380" aria-label="Implant cross-section illustration">
+          <defs>
+            <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#A8844E" stroke-width="1" opacity=".45"/></pattern>
+            <pattern id="dots" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r=".8" fill="#C9AA78" opacity=".35"/></pattern>
+          </defs>
+          <!-- bone -->
+          <path d="M10 200 Q160 188 310 200 L310 380 L10 380Z" fill="url(#hatch)" stroke="#C9AA78" stroke-width="1"/>
+          <!-- gum -->
+          <path d="M10 170 Q60 160 95 176 Q160 196 225 176 Q260 160 310 170 L310 202 Q160 190 10 202Z" fill="rgba(201,170,120,.12)" stroke="#FBF8F2" stroke-width="1.2"/>
+          <!-- neighbours (ghost) -->
+          <g fill="none" stroke="rgba(251,248,242,.35)" stroke-width="1.2" stroke-dasharray="3 4">
+            <path d="M8 60 C8 40 60 36 76 60 L84 170 Q86 250 64 320 Q48 330 40 300 Q28 240 14 170Z"/>
+            <path d="M312 60 C312 40 260 36 244 60 L236 170 Q234 250 256 320 Q272 330 280 300 Q292 240 306 170Z"/>
+          </g>
+          <!-- fixture -->
+          <g class="part" id="fx">
+            <path d="M140 196 H180 L178 330 Q160 352 142 330Z" fill="#223044" stroke="#FBF8F2" stroke-width="1.3"/>
+            <g stroke="#C9AA78" stroke-width="1.3" stroke-linecap="round"><path d="M137 214 L183 208M137 234 L183 228M138 254 L182 248M139 274 L181 268M140 294 L180 288M142 314 L178 308"/></g>
+          </g>
+          <!-- abutment -->
+          <g class="part" id="ab"><path d="M146 150 H174 L178 196 H142Z" fill="rgba(201,170,120,.25)" stroke="#FBF8F2" stroke-width="1.3"/></g>
+          <!-- crown -->
+          <g class="part" id="cr">
+            <path d="M112 62 C112 30 208 30 208 62 C210 104 198 150 188 162 Q160 172 132 162 C122 150 110 104 112 62Z" fill="url(#dots)" stroke="#FBF8F2" stroke-width="1.5"/>
+            <path d="M128 56 C140 44 160 42 176 46" stroke="#FBF8F2" stroke-width="1" fill="none" opacity=".6"/>
+          </g>
+          <!-- labels -->
+          <g id="labels" class="part">
+            <line x1="208" y1="90" x2="262" y2="90" stroke="#C9AA78" stroke-width=".8"/><text class="lbl" x="266" y="93">Crown</text>
+            <line x1="176" y1="172" x2="262" y2="140" stroke="#C9AA78" stroke-width=".8"/><text class="lbl" x="266" y="143">Abutment</text>
+            <line x1="182" y1="270" x2="262" y2="250" stroke="#C9AA78" stroke-width=".8"/><text class="lbl" x="266" y="253">Implant</text>
+            <line x1="30" y1="350" x2="60" y2="350" stroke="#C9AA78" stroke-width=".8"/><text class="lbl" x="66" y="353">Bone</text>
+          </g>
+        </svg>
+      </div>
+      <div class="steps">
+        <span class="sc">iii. Dental implants</span>
+        <h2 style="margin:16px 0 20px">A new tooth, <i>built in four stages.</i></h2>
+        <div class="stp on" data-s="0"><span class="num">i.</span><h3>Examination &amp; scan</h3><p>An X-ray and examination check the bone and plan the exact angle and depth.</p></div>
+        <div class="stp" data-s="1"><span class="num">ii.</span><h3>The implant</h3><p>A small titanium post is placed under local anaesthetic. It becomes your new root.</p></div>
+        <div class="stp" data-s="2"><span class="num">iii.</span><h3>Healing &amp; abutment</h3><p>Over the following weeks the bone bonds to the implant, then a connector is fitted.</p></div>
+        <div class="stp" data-s="3"><span class="num">iv.</span><h3>Your crown</h3><p>A custom, colour-matched crown completes the tooth. Fixed, natural, permanent.</p></div>
+        <div class="prog"><i id="prog"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORTHODONTICS -->
+<section class="rx" id="orthodontics">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="sc">iv. Orthodontics</span>
+      <h2 style="margin-top:18px">Braces or aligners? <i>We'll prescribe honestly.</i></h2>
+    </div>
+    <div class="rx-grid">
+      <article class="card rv">
+        <div class="top"><div><h3>Braces</h3><small>Metal or tooth-coloured ceramic</small></div><span class="rxm">℞</span></div>
+        <div class="lead-row"><span>Suits</span><i></i><span>Simple to complex cases</span></div>
+        <div class="lead-row"><span>Visibility</span><i></i><span>Visible · ceramic is subtle</span></div>
+        <div class="lead-row"><span>Removable</span><i></i><span>No — works around the clock</span></div>
+        <div class="lead-row"><span>Reviews</span><i></i><span>Every 4–6 weeks</span></div>
+        <div class="lead-row"><span>Cost</span><i></i><span>Usually the lower option</span></div>
+        <div class="foot"><button class="link" data-book data-s="Braces">Book an orthodontic consult</button><span class="sig">DR</span></div>
+      </article>
+      <article class="card rv">
+        <div class="top"><div><h3>Clear aligners</h3><small>Removable, nearly invisible trays</small></div><span class="rxm">℞</span></div>
+        <div class="lead-row"><span>Suits</span><i></i><span>Mild to moderate cases</span></div>
+        <div class="lead-row"><span>Visibility</span><i></i><span>Nearly invisible</span></div>
+        <div class="lead-row"><span>Removable</span><i></i><span>Yes — 20–22 hours a day</span></div>
+        <div class="lead-row"><span>Reviews</span><i></i><span>Fewer visits</span></div>
+        <div class="lead-row"><span>Food</span><i></i><span>No restrictions</span></div>
+        <div class="foot"><button class="link" data-book data-s="Clear aligners">Book an aligner consult</button><span class="sig">DR</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICE -->
+<section class="practice">
+  <div class="wrap">
+    <div class="rv" style="display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap">
+      <div><span class="sc">The rooms</span><h2 style="margin-top:18px">Small by design.</h2></div>
+      <p class="lead" style="max-width:40ch">Fewer patients a day means more time for each — and a quieter visit for you.</p>
+    </div>
+    <div class="grid">
+      <figure class="rv"><div class="ph"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80&auto=format&fit=crop" alt="Treatment room" onerror="this.remove()"><span class="fb">Treatment room</span></div><figcaption>The treatment room — clinic photography to be supplied</figcaption></figure>
+      <figure class="rv"><div class="ph"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80&auto=format&fit=crop" alt="Consultation" onerror="this.remove()"><span class="fb">Consultation</span></div><figcaption>Consultations, never rushed</figcaption></figure>
+      <figure class="rv"><div class="ph"><img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=80&auto=format&fit=crop" alt="Sterilised instruments" onerror="this.remove()"><span class="fb">Sterilisation</span></div><figcaption>Instruments sterilised for every patient</figcaption></figure>
+    </div>
+    <div class="promises">
+      <div class="rv"><span class="num">i.</span><h3>A written plan</h3><p>Diagnosis, options and cost in writing before any treatment begins.</p></div>
+      <div class="rv"><span class="num">ii.</span><h3>The same dentist</h3><p>Dr. Rahman sees you at every stage — no handovers, no surprises.</p></div>
+      <div class="rv"><span class="num">iii.</span><h3>Gentle by habit</h3><p>Proper anaesthesia and patience. Nervous patients are welcome.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <div class="rv">
+      <span class="sc">Questions</span>
+      <h2 style="margin:18px 0 20px">Asked <i>often.</i></h2>
+      <p class="lead">Anything else — message the practice and Dr. Rahman's team will reply during clinic hours.</p>
+      <a class="btn btn-line" style="margin-top:26px" href="https://wa.me/8801894221464" target="_blank" rel="noopener">Ask on WhatsApp <svg><use href="#arr"/></svg></a>
+    </div>
+    <div class="rv">
+      <details open><summary>Does an implant hurt?</summary><p>It's done under local anaesthetic, so you feel pressure rather than pain. Most patients find it easier than an extraction, and any soreness afterwards is usually managed with ordinary painkillers.</p></details>
+      <details><summary>Am I too old for braces?</summary><p>No. Teeth can be moved at any age if the gums and bone are healthy. Many of our orthodontic patients are adults.</p></details>
+      <details><summary>How much will my treatment cost?</summary><p>It depends on your case, so you'll receive a written estimate after the examination — with no obligation to proceed on the day.</p></details>
+      <details><summary>Can I get an opinion before visiting?</summary><p>Yes. Send clear photos of your teeth on WhatsApp for an initial view, then come in for a full examination.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="ccard rv" aria-label="Clinic calling card">
+      <div class="t"><div class="w">Dental Care<i>with Dr. Rahman</i></div><span class="seal">DR</span></div>
+      <div class="b"><div>Road 4, Block C<br>Banani, Dhaka</div><div style="text-align:right"><b>+880 1894-221464</b><br>By appointment</div></div>
+    </div>
+    <div class="vinfo rv">
+      <span class="sc">v. Visit</span>
+      <h2>Find the <i>practice.</i></h2>
+      <div class="vrow"><span>Address</span><div>Road 4, Block C, Banani, Dhaka</div></div>
+      <div class="vrow"><span>Appointments</span><a href="tel:+8801894221464">+880 1894-221464</a></div>
+      <div class="vrow"><span>Hours</span><div>[Clinic hours — to confirm]</div></div>
+      <div class="b">
+        <button class="btn btn-ink" data-book>Request an appointment <svg><use href="#arr"/></svg></button>
+        <a class="btn btn-line" href="https://maps.google.com/?q=Road+4+Block+C+Banani+Dhaka" target="_blank" rel="noopener">Directions</a>
+      </div>
+    </div>
+    <div class="mapbox rv"><iframe title="Map — Road 4, Block C, Banani" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Road%204%20Block%20C%20Banani%20Dhaka&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="big">Your smile,<br><i>personally.</i></div>
+    <div class="cta">
+      <button class="btn btn-ink" data-book>Request an appointment <svg><use href="#arr"/></svg></button>
+      <a class="btn btn-line l" href="tel:+8801894221464">+880 1894-221464</a>
+    </div>
+    <div class="fg">
+      <div><div class="brand" style="margin-bottom:14px"><span class="seal" style="border-color:var(--paper);color:var(--paper)">DR</span><span class="w" style="color:var(--paper)">Dental Care<small style="color:var(--brass-2)">with Dr. Rahman</small></span></div><p style="max-width:34ch">A personal dental practice in Banani, Dhaka.</p></div>
+      <div><h4>Treatments</h4><ul><li><a href="#implants">Dental implants</a></li><li><a href="#orthodontics">Braces &amp; aligners</a></li><li><a href="#treatments">Veneers</a></li><li><a href="#treatments">Root canal</a></li></ul></div>
+      <div><h4>Practice</h4><ul><li><a href="tel:+8801894221464">+880 1894-221464</a></li><li><a href="https://wa.me/8801894221464" target="_blank" rel="noopener">WhatsApp</a></li><li>Road 4, Block C, Banani</li></ul></div>
+    </div>
+    <div class="fb"><span>© <span id="yr"></span> Dental Care with Dr. Rahman</span><span class="sec"><svg><use href="#lock"/></svg>Secured with SSL · Hosted in Bangladesh</span></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a href="tel:+8801894221464"><svg><use href="#ph"/></svg>Call</a>
+  <a href="https://wa.me/8801894221464" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>WhatsApp</a>
+  <button class="bk" data-book>Appointment</button>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="apT">
+  <form class="appt" id="appt">
+    <div class="main">
+      <button type="button" class="x" id="apX" aria-label="Close">×</button>
+      <span class="sc" style="color:var(--ox)">Appointment request</span>
+      <h3 id="apT">Your appointment slip</h3>
+      <p class="sub">Fill it in — the practice will confirm by WhatsApp.</p>
+      <div class="fld"><label for="an">Name</label><input id="an" required placeholder="Your full name" autocomplete="name"></div>
+      <div class="fld"><label for="ap">Phone</label><input id="ap" required type="tel" placeholder="01XXXXXXXXX" autocomplete="tel"></div>
+      <div class="fld"><label for="as">For</label><select id="as"><option>Consultation</option><option>Dental implant</option><option>Braces</option><option>Clear aligners</option><option>Veneers / Smile design</option><option>Root canal / Toothache</option><option>Cleaning / Whitening</option></select></div>
+      <div class="fld"><label for="ad">Preferred day</label><input id="ad" type="date"></div>
+      <div class="fld"><label for="at">Time</label><select id="at"><option>Morning</option><option>Afternoon</option><option>Evening</option></select></div>
+      <button class="btn btn-ink go" type="submit">Send slip via WhatsApp <svg><use href="#arr"/></svg></button>
+      <p class="fine">Sent directly to the practice · nothing stored on this site</p>
+    </div>
+    <div class="stub">
+      <span class="sc">Admit one</span>
+      <span class="seal">DR</span>
+      <div><div class="no">Seen by<br>Dr. Rahman</div><div class="sc" style="margin-top:14px">Road 4 · Block C</div></div>
+    </div>
+  </form>
+</div>
+
+<script>
+(() => {
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  $('#yr').textContent = new Date().getFullYear();
+  addEventListener('scroll', () => $('#nav').classList.toggle('s', scrollY > 10), {passive:true});
+  const dr = $('#drawer');
+  $('#mb').onclick = () => dr.classList.add('o');
+  $('#dx').onclick = () => dr.classList.remove('o');
+  $$('#drawer a.l').forEach(a => a.onclick = () => dr.classList.remove('o'));
+
+  // Treatments index
+  const U = id => `https://images.unsplash.com/${id}?w=700&q=80&auto=format&fit=crop`;
+  const T = [
+    {n:'i.', t:'Dental Implants', k:'Missing teeth', img:'photo-1606811971618-4486d14f3f99', p:'A titanium root and custom crown replace a missing tooth permanently — no bridges cut into healthy neighbours, no loose dentures.', f:[['Visits','3–4 over a few months'],['Anaesthetic','Local'],['Lasts','Many years with care']], s:'Dental implant'},
+    {n:'ii.', t:'Braces', k:'Orthodontics', img:'photo-1609840114035-3c981b782dfe', p:'Metal or ceramic braces for crowding, gaps and bite problems, reviewed personally at every adjustment.', f:[['Duration','Typically 12–24 months'],['Reviews','Every 4–6 weeks'],['Suits','Teens &amp; adults']], s:'Braces'},
+    {n:'iii.', t:'Clear Aligners', k:'Orthodontics', img:'photo-1570172619644-dfd03ed5d881', p:'Removable, nearly invisible trays — a discreet choice for mild to moderate crowding and spacing.', f:[['Wear','20–22 hrs a day'],['Visits','Fewer check-ups'],['Suits','Adults, professionals']], s:'Clear aligners'},
+    {n:'iv.', t:'Veneers &amp; Smile Design', k:'Cosmetic', img:'photo-1522335789203-aabd1fc54bc9', p:'Chipped, worn or uneven teeth rebuilt with thin porcelain — previewed digitally before any work begins.', f:[['Visits','2–3'],['Planning','Digital preview'],['Material','Porcelain']], s:'Veneers / Smile design'},
+    {n:'v.', t:'Root Canal Treatment', k:'Relief', img:'photo-1598256989800-fe5f95da9787', p:'Removes infection and saves the natural tooth. Done gently, often in a single appointment.', f:[['Visits','1–2'],['Anaesthetic','Local'],['Aim','Save the tooth']], s:'Root canal / Toothache'},
+    {n:'vi.', t:'Cleaning &amp; Whitening', k:'Maintenance', img:'photo-1519823551278-64ac92734fb1', p:'Professional scaling removes tartar and stains; whitening lifts the shade further for a fresher smile.', f:[['Visits','1'],['Recommended','Every 6 months'],['Downtime','None']], s:'Cleaning / Whitening'}
+  ];
+  $('#idx').innerHTML = T.map((x,i) => `
+    <div class="row rv" data-img="${U(x.img)}">
+      <button aria-expanded="false"><span class="n">${x.n}</span><h3>${x.t}</h3><span class="k">${x.k}</span><span class="pm">+</span></button>
+      <div class="body"><div><div class="inner">
+        <span class="sp"></span>
+        <p>${x.p}</p>
+        <dl>${x.f.map(([a,b])=>`<div><dt>${a}</dt><dd>${b}</dd></div>`).join('')}</dl>
+        <div class="act" style="flex-direction:column;align-items:start;gap:14px"><div class="ph" style="width:100%"><img src="${U(x.img)}" alt="" onerror="this.remove()"><span class="fb">${x.k}</span></div><button class="link" data-book data-s="${x.s}">Book for this →</button></div>
+      </div></div></div>
+    </div>`).join('');
+  $$('.row>button').forEach(b => b.onclick = () => {
+    const r = b.parentElement, open = !r.classList.contains('o');
+    $$('.row').forEach(x => { x.classList.remove('o'); x.firstElementChild.setAttribute('aria-expanded','false'); });
+    if (open) { r.classList.add('o'); b.setAttribute('aria-expanded','true'); }
+  });
+  $$('.row')[0].classList.add('o');
+
+  // cursor-follow preview
+  const fl = $('#float'), fi = $('#floatImg');
+  let fx = 0, fy = 0, cx = 0, cy = 0, on = false;
+  $$('.row').forEach(r => {
+    r.addEventListener('mouseenter', () => { if (r.classList.contains('o')) return; fi.style.display=''; fi.src = r.dataset.img; fl.classList.add('on'); on = true; });
+    r.addEventListener('mouseleave', () => { fl.classList.remove('on'); on = false; });
+    r.addEventListener('click', () => { fl.classList.remove('on'); });
+  });
+  addEventListener('mousemove', e => { fx = e.clientX + 170; fy = e.clientY; });
+  (function loop(){ cx += (fx-cx)*.14; cy += (fy-cy)*.14; fl.style.left = cx+'px'; fl.style.top = cy+'px'; requestAnimationFrame(loop); })();
+
+  // implant scroll
+  const track = $('#track'), fxp = $('#fx'), ab = $('#ab'), cr = $('#cr'), lb = $('#labels'), prog = $('#prog'), steps = $$('.anat .stp');
+  const setP = (el, v, dy) => { el.style.opacity = Math.max(.05, v); el.style.transform = `translateY(${(1-v)*dy}px)`; };
+  const clamp = v => Math.max(0, Math.min(1, v));
+  function onScroll(){
+    const r = track.getBoundingClientRect(), total = r.height - innerHeight;
+    const p = clamp(-r.top / total);
+    prog.style.width = (p*100)+'%';
+    setP(fxp, clamp((p-.18)/.2), -140);
+    setP(ab,  clamp((p-.45)/.15), -90);
+    setP(cr,  clamp((p-.68)/.18), -120);
+    lb.style.opacity = clamp((p-.86)/.1);
+    const s = p < .25 ? 0 : p < .5 ? 1 : p < .72 ? 2 : 3;
+    steps.forEach((x,i) => x.classList.toggle('on', i === s));
+  }
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // booking
+  const m = $('#modal');
+  const openB = s => { if (s) $('#as').value = s; m.classList.add('o'); dr.classList.remove('o'); setTimeout(()=>$('#an').focus(),120); };
+  const closeB = () => m.classList.remove('o');
+  document.addEventListener('click', e => { const b = e.target.closest('[data-book]'); if (b) { e.preventDefault(); openB(b.dataset.s); } });
+  $('#apX').onclick = closeB;
+  m.onclick = e => { if (e.target === m) closeB(); };
+  addEventListener('keydown', e => { if (e.key === 'Escape') { closeB(); dr.classList.remove('o'); } });
+  $('#ad').min = new Date().toISOString().split('T')[0];
+  $('#appt').onsubmit = e => {
+    e.preventDefault();
+    const msg = ["Hello, I'd like to request an appointment with Dr. Rahman.", '',
+      'Name: '+$('#an').value, 'Phone: '+$('#ap').value, 'For: '+$('#as').value,
+      'Preferred day: '+($('#ad').value||'Flexible'), 'Time: '+$('#at').value].join('\n');
+    window.open('https://wa.me/8801894221464?text='+encodeURIComponent(msg), '_blank');
+    closeB();
+  };
+
+  // reveal
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), {threshold:.1});
+  $$('.rv').forEach(el => io.observe(el));
+})();
+</script>
+</body>
+</html>
